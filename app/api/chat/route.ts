@@ -5,9 +5,12 @@ import Anthropic from '@anthropic-ai/sdk';
 import { getRatelimit } from '@/lib/ratelimit';
 import { about } from '@/data/about';
 
-const anthropic = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
-
 export async function POST(req: NextRequest) {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) {
+    return NextResponse.json({ error: 'AI not configured.' }, { status: 503 });
+  }
+  const anthropic = new Anthropic({ apiKey });
   // Rate limiting
   const rl = getRatelimit();
   if (rl) {
