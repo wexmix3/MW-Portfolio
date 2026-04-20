@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { ExternalLink, ArrowRight } from 'lucide-react';
 import { featuredProjects } from '@/data/projects';
