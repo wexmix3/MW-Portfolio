@@ -3,12 +3,8 @@ import { Mail, ArrowRight, FileText, MapPin } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '@/components/ui/BrandIcons';
 import { about } from '@/data/about';
 
-const skills = [
-  'Next.js 14', 'TypeScript', 'React',
-  'Supabase', 'PostgreSQL', 'Claude AI',
-  'Stripe', 'Vercel', 'Tailwind CSS',
-  'Playwright', 'Vitest', 'GitHub Actions',
-];
+const financeSkills = ['Project Finance', 'Structured Credit', 'Tax Equity', 'LNG / Renewables', 'Bloomberg', 'Capital IQ'];
+const buildingSkills = ['Next.js', 'TypeScript', 'Supabase', 'Claude AI', 'Stripe', 'Vercel'];
 
 export default function AboutHero() {
   return (
@@ -17,31 +13,30 @@ export default function AboutHero() {
       <div className="absolute inset-0 bg-gradient-radial from-gold/5 via-transparent to-transparent pointer-events-none" />
 
       <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 py-24 lg:py-32">
-        <div className="grid lg:grid-cols-[1fr_360px] gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-[1fr_340px] gap-12 lg:gap-16 items-center">
 
           {/* ── Left column ── */}
           <div className="animate-fade-up">
-            {/* Availability badge */}
+            {/* Role badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold/20 bg-gold/5 text-gold text-xs font-medium mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse-slow" />
-              Open to internships &amp; full-time roles
+              Analyst at BBVA · Energy &amp; Infrastructure
             </div>
 
             {/* Name */}
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl text-void-50 leading-tight mb-3">
-              Hi, I&apos;m<br />
               Max Wexley<span className="text-gold">.</span>
             </h1>
 
             {/* Title + location */}
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-6">
               <p className="text-lg sm:text-xl text-void-300 font-medium">
-                Full-Stack Developer &amp; AI Builder
+                Finance by day. Builder by nature.
               </p>
               <span className="hidden sm:block w-1 h-1 rounded-full bg-void-600" />
               <span className="flex items-center gap-1 text-sm text-void-500">
                 <MapPin size={13} />
-                University of Michigan · Ann Arbor, MI
+                New York City, NY
               </span>
             </div>
 
@@ -94,15 +89,15 @@ export default function AboutHero() {
           {/* ── Right column ── */}
           <div className="flex flex-col gap-4 animate-fade-up delay-200">
 
-            {/* Avatar card */}
-            <div className="rounded-2xl border border-surface-border bg-surface-card p-6 flex items-center gap-4">
-              <div className="w-16 h-16 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center flex-shrink-0">
-                <span className="font-display text-xl font-bold text-gold">MW</span>
+            {/* Identity card */}
+            <div className="rounded-2xl border border-surface-border bg-surface-card p-5 flex items-center gap-4">
+              <div className="w-14 h-14 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center flex-shrink-0">
+                <span className="font-display text-lg font-bold text-gold">MW</span>
               </div>
               <div>
                 <p className="font-semibold text-void-50 text-sm">Max Wexley</p>
-                <p className="text-xs text-void-400 mt-0.5">University of Michigan</p>
-                <p className="text-xs text-void-500 mt-0.5">Ann Arbor, MI</p>
+                <p className="text-xs text-void-400 mt-0.5">BBVA · Energy Client Coverage</p>
+                <p className="text-xs text-void-500 mt-0.5">Michigan &apos;24 · SIE · Series 7 · Series 63</p>
               </div>
             </div>
 
@@ -121,7 +116,7 @@ export default function AboutHero() {
                   <p className="text-sm font-semibold text-void-50 group-hover:text-gold transition-colors">
                     Chapterly
                   </p>
-                  <p className="text-xs text-void-500 mt-0.5">AI-powered reading tracker · Live</p>
+                  <p className="text-xs text-void-500 mt-0.5">AI reading tracker · Live users</p>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse-slow" />
@@ -130,20 +125,27 @@ export default function AboutHero() {
               </a>
             </div>
 
-            {/* Skills */}
-            <div className="rounded-2xl border border-surface-border bg-surface-card p-5">
-              <p className="text-xs font-medium text-void-500 uppercase tracking-widest mb-3">
-                Stack
-              </p>
-              <div className="flex flex-wrap gap-1.5">
-                {skills.map(skill => (
-                  <span
-                    key={skill}
-                    className="text-xs px-2.5 py-1 rounded-md border border-surface-border bg-void-950 text-void-300"
-                  >
-                    {skill}
-                  </span>
-                ))}
+            {/* Dual skill panels */}
+            <div className="rounded-2xl border border-surface-border bg-surface-card p-5 space-y-4">
+              <div>
+                <p className="text-xs font-medium text-void-500 uppercase tracking-widest mb-2">Finance</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {financeSkills.map(s => (
+                    <span key={s} className="text-xs px-2.5 py-1 rounded-md border border-surface-border bg-void-950 text-void-300">
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="border-t border-surface-border pt-4">
+                <p className="text-xs font-medium text-void-500 uppercase tracking-widest mb-2">Building</p>
+                <div className="flex flex-wrap gap-1.5">
+                  {buildingSkills.map(s => (
+                    <span key={s} className="text-xs px-2.5 py-1 rounded-md border border-gold/20 bg-gold/5 text-gold">
+                      {s}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>

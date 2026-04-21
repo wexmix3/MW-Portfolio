@@ -20,27 +20,27 @@ const instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Max Wexley — Full-Stack Developer & AI Builder',
+    default: 'Max Wexley — Finance Analyst & Builder',
     template: '%s | Max Wexley',
   },
   description:
-    'Full-stack developer and University of Michigan student. Creator of Chapterly — a live AI-powered reading app. Specializing in Next.js, TypeScript, Supabase, and Anthropic Claude.',
-  keywords: ['Max Wexley', 'developer', 'AI', 'Next.js', 'University of Michigan', 'Chapterly', 'portfolio'],
+    'Finance analyst at BBVA and self-taught builder. Michigan \'24. Creator of Chapterly — a live AI-powered reading app. Finance by day, building by nature.',
+  keywords: ['Max Wexley', 'finance analyst', 'BBVA', 'builder', 'Chapterly', 'University of Michigan', 'energy'],
   authors: [{ name: 'Max Wexley' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://maxwexley.com',
     siteName: 'Max Wexley',
-    title: 'Max Wexley — Full-Stack Developer & AI Builder',
+    title: 'Max Wexley — Finance Analyst & Builder',
     description:
-      'Full-stack developer and University of Michigan student. Creator of Chapterly — a live AI-powered reading app.',
+      'Finance analyst at BBVA and self-taught builder. Michigan \'24. Creator of Chapterly.',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Max Wexley' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Max Wexley — Full-Stack Developer & AI Builder',
-    description: 'University of Michigan developer building AI-powered web apps.',
+    title: 'Max Wexley — Finance Analyst & Builder',
+    description: 'Finance analyst at BBVA. Self-taught builder. Michigan \'24.',
     images: ['/og-image.png'],
   },
   robots: { index: true, follow: true },
