@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: '%s | Max Wexley',
   },
   description:
-    'University of Michigan developer building AI-powered web apps. Creator of Chapterly, CourtBook NYC, and more. Specializing in Next.js, TypeScript, Supabase, and Anthropic Claude.',
+    'Full-stack developer and University of Michigan student. Creator of Chapterly — a live AI-powered reading app. Specializing in Next.js, TypeScript, Supabase, and Anthropic Claude.',
   keywords: ['Max Wexley', 'developer', 'AI', 'Next.js', 'University of Michigan', 'Chapterly', 'portfolio'],
   authors: [{ name: 'Max Wexley' }],
   openGraph: {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: 'Max Wexley',
     title: 'Max Wexley — Full-Stack Developer & AI Builder',
     description:
-      'University of Michigan developer building AI-powered web apps. Creator of Chapterly, CourtBook NYC, and more.',
+      'Full-stack developer and University of Michigan student. Creator of Chapterly — a live AI-powered reading app.',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Max Wexley' }],
   },
   twitter: {

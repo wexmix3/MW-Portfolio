@@ -7,6 +7,7 @@ import { Menu, X } from 'lucide-react';
 
 const links = [
   { href: '/projects', label: 'Projects' },
+  { href: '/resume',   label: 'Resume' },
   { href: '/about',    label: 'About' },
   { href: '/chat',     label: 'Chat with AI' },
 ];
@@ -23,7 +24,7 @@ export default function Nav() {
           href="/"
           className="font-display text-lg text-void-50 hover:text-gold transition-colors"
         >
-          MW<span className="text-gold">.</span>
+          Max Wexley<span className="text-gold">.</span>
         </Link>
 
         {/* Desktop links */}
@@ -42,10 +43,13 @@ export default function Nav() {
             </Link>
           ))}
           <a
-            href="mailto:maxmwexley@gmail.com"
-            className="text-sm px-3 py-1.5 rounded-md border border-surface-border text-void-200 hover:border-gold hover:text-gold transition-all"
+            href="https://linkedin.com/in/maxwexley"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-md border border-surface-border text-void-200 hover:border-gold hover:text-gold transition-all"
           >
-            Contact
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
           </a>
         </div>
 
@@ -74,8 +78,14 @@ export default function Nav() {
               {label}
             </Link>
           ))}
-          <a href="mailto:maxmwexley@gmail.com" className="text-sm text-void-300">
-            Contact
+          <a
+            href="https://linkedin.com/in/maxwexley"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 text-sm text-void-300"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
           </a>
         </div>
       )}

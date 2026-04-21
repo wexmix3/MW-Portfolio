@@ -1,11 +1,12 @@
 export const dynamic = 'force-dynamic';
 
-import Hero from '@/components/home/Hero';
+import nextDynamic from 'next/dynamic';
+import AboutHero from '@/components/home/AboutHero';
 import StatsStrip from '@/components/home/StatsStrip';
-import FeaturedProjects from '@/components/home/FeaturedProjects';
 import AICta from '@/components/home/AICta';
-import AboutTeaser from '@/components/home/AboutTeaser';
 import type { GitHubStats } from '@/types';
+
+const FeaturedProjects = nextDynamic(() => import('@/components/home/FeaturedProjects'), { ssr: true });
 
 async function fetchGitHubStats(): Promise<GitHubStats | null> {
   try {
@@ -79,11 +80,10 @@ export default async function HomePage() {
 
   return (
     <>
-      <Hero />
+      <AboutHero />
       <StatsStrip github={github} chapterlyUsers={chapterlyUsers} />
       <FeaturedProjects />
       <AICta />
-      <AboutTeaser />
     </>
   );
 }

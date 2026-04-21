@@ -55,7 +55,7 @@ export const projects: Project[] = [
       'Stripe client must be lazy-initialized to avoid build-time environment errors in Next.js',
       'Seeding idempotently (upsert on name+borough) makes iterative development dramatically faster',
     ],
-    featured: true,
+    featured: false,
     order: 2,
   },
   {
@@ -80,7 +80,7 @@ export const projects: Project[] = [
       'Recharts SVG tick fill is not affected by CSS dark mode — use a MutationObserver + state to pass conditional fill values',
       'Financial data benefits from pessimistic loading patterns — show stale data instantly, then refresh',
     ],
-    featured: true,
+    featured: false,
     order: 3,
   },
   {
