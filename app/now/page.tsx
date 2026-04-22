@@ -64,38 +64,44 @@ export default function NowPage() {
             <h2 className="text-lg font-semibold text-void-50 mb-5">What I&apos;m doing outside of work</h2>
             <div className="flex flex-col gap-3">
 
-              {/* Marathon */}
-              <div className="rounded-xl border border-surface-border bg-surface-card overflow-hidden">
-                <div className="relative h-52 bg-void-900">
-                  <Image
-                    src="/marathon.jpg"
-                    alt="Marathon finish"
-                    fill
-                    className="object-cover object-center"
-                  />
-                </div>
-                <div className="p-5">
-                  <div className="font-medium text-void-50 mb-1">Marathon</div>
-                  <p className="text-sm text-void-400 leading-relaxed">
-                    Ran a full marathon. Hardest thing I&apos;ve done physically. The last six miles were a negotiation with myself. Still running.
-                  </p>
-                </div>
-              </div>
-
               {/* Half-Ironman */}
               <div className="rounded-xl border border-surface-border bg-surface-card overflow-hidden">
                 <div className="relative h-52 bg-void-900">
                   <Image
                     src="/halfironman.jpg"
-                    alt="Half-Ironman race"
+                    alt="Ironman 70.3 Jones Beach finish line"
                     fill
                     className="object-cover object-center"
                   />
                 </div>
                 <div className="p-5">
-                  <div className="font-medium text-void-50 mb-1">Half-Ironman</div>
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="font-medium text-void-50">Ironman 70.3 — Jones Beach, NY</div>
+                    <span className="text-xs text-gold font-medium">5:45</span>
+                  </div>
                   <p className="text-sm text-void-400 leading-relaxed">
-                    1.2 mile swim, 56 mile bike, 13.1 mile run. Did it. The kind of thing that takes months of early mornings and makes you oddly calm about everything else.
+                    1.2 mile swim, 56 mile bike, 13.1 mile run. The kind of thing that takes months of early mornings and makes you oddly calm about everything else.
+                  </p>
+                </div>
+              </div>
+
+              {/* Marathon */}
+              <div className="rounded-xl border border-surface-border bg-surface-card overflow-hidden">
+                <div className="relative h-52 bg-void-900">
+                  <Image
+                    src="/marathon.jpg"
+                    alt="Philadelphia Marathon"
+                    fill
+                    className="object-cover object-center"
+                  />
+                </div>
+                <div className="p-5">
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="font-medium text-void-50">Philadelphia Marathon</div>
+                    <span className="text-xs text-gold font-medium">3:13</span>
+                  </div>
+                  <p className="text-sm text-void-400 leading-relaxed">
+                    26.2 miles through Philly. The last six were a negotiation with myself. 3:13 is Boston Qualifier territory — something I&apos;m still quietly proud of.
                   </p>
                 </div>
               </div>
