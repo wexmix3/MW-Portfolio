@@ -26,7 +26,7 @@ export default function AboutHero() {
 
             {/* Name */}
             <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl text-void-50 leading-tight mb-3">
-              Max Wexley<span className="text-gold">.</span>
+              Max Wexley
             </h1>
 
             {/* Title + location */}

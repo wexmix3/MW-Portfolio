@@ -12,8 +12,7 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const liveCount    = projects.filter(p => p.status === 'live').length;
-  const projectCount = projects.length;
+  const liveCount = projects.filter(p => p.status === 'live').length;
 
   return (
     <div className="pt-24 pb-20">
@@ -27,7 +26,6 @@ export default function AboutPage() {
             <p className="text-gold text-xs font-medium tracking-widest uppercase mb-2">About</p>
             <h1 className="text-5xl sm:text-6xl font-bold text-void-50 mb-2">
               Max Wexley
-              <span className="text-gold">.</span>
             </h1>
             <p className="text-void-400 text-xl">{about.title}</p>
           </div>
@@ -36,9 +34,9 @@ export default function AboutPage() {
         {/* Quick stats row */}
         <div className="grid grid-cols-3 gap-4 mb-14">
           {[
-            { value: projectCount.toString(), label: 'Projects built' },
-            { value: liveCount.toString(), label: 'Live & deployed' },
-            { value: '3+', label: 'AI-powered apps' },
+            { value: liveCount.toString(), label: 'Shipped & live' },
+            { value: '2+', label: 'In the pipeline' },
+            { value: '3', label: 'Years building' },
           ].map(({ value, label }) => (
             <div key={label} className="p-4 rounded-xl border border-surface-border bg-surface-card text-center">
               <div className="text-3xl font-bold text-gold mb-1">{value}</div>

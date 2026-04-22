@@ -3,7 +3,6 @@ export const dynamic = 'force-dynamic';
 import nextDynamic from 'next/dynamic';
 import AboutHero from '@/components/home/AboutHero';
 import StatsStrip from '@/components/home/StatsStrip';
-import AICta from '@/components/home/AICta';
 import type { GitHubStats } from '@/types';
 
 const FeaturedProjects = nextDynamic(() => import('@/components/home/FeaturedProjects'), { ssr: true });
@@ -83,7 +82,6 @@ export default async function HomePage() {
       <AboutHero />
       <StatsStrip github={github} chapterlyUsers={chapterlyUsers} />
       <FeaturedProjects />
-      <AICta />
     </>
   );
 }

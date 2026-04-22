@@ -24,7 +24,7 @@ export default function Nav() {
           href="/"
           className="font-display text-lg text-void-50 hover:text-gold transition-colors"
         >
-          Max Wexley<span className="text-gold">.</span>
+          Max Wexley
         </Link>
 
         {/* Desktop links */}

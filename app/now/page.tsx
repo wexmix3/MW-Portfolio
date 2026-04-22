@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Now',
@@ -7,126 +8,149 @@ export const metadata: Metadata = {
 
 const LAST_UPDATED = 'April 2026';
 
-type Section = {
-  eyebrow: string;
-  title: string;
-  items: { label: string; sub?: string }[];
-};
-
-const sections: Section[] = [
-  {
-    eyebrow: 'Building',
-    title: 'What I\'m working on',
-    items: [
-      {
-        label: 'Chapterly',
-        sub: 'A full-stack reading tracker with AI-powered insights, gamification, and social features. Live at getchapterly.com — and the app I use most.',
-      },
-      {
-        label: 'Finance Dashboard',
-        sub: 'A personal finance tool covering portfolio tracking, budgets, and net worth trends. Seven phases done, two to go.',
-      },
-      {
-        label: 'More to come',
-        sub: 'A few other ideas in early motion. Not ready to name them yet — but they\'re happening.',
-      },
-    ],
-  },
-  {
-    eyebrow: 'Training',
-    title: 'What I\'m doing outside of work',
-    items: [
-      {
-        label: 'Boxing',
-        sub: 'Training consistently with the goal of sparring one day. Less about fighting, more about discipline, focus, and having something physical to show up for.',
-      },
-    ],
-  },
-  {
-    eyebrow: 'Reading',
-    title: 'What\'s on my nightstand',
-    items: [
-      {
-        label: 'The Big Deal',
-        sub: 'Inside the world of major M&A transactions. Relevant to the finance side of my life.',
-      },
-      {
-        label: 'The Gates of Europe',
-        sub: 'A history of Ukraine — dense, good, and a reminder that geography shapes everything.',
-      },
-      {
-        label: 'Red Rising (Second Trilogy)',
-        sub: 'Iron Gold, Dark Age, and Light Bringer. The kind of series where you read 100 pages before realizing it\'s midnight.',
-      },
-    ],
-  },
-  {
-    eyebrow: 'Learning',
-    title: 'What I\'m studying',
-    items: [
-      {
-        label: 'Banking products',
-        sub: 'Term loans, letters of credit, revolving credit facilities, and tax credit transfers — the plumbing of commercial finance. Relevant to my day job at BBVA and how I think about building fintech.',
-      },
-      {
-        label: 'AI-native development',
-        sub: 'Claude Code, VS Code, Supabase, Vercel, and APIs. Less "learning to code," more learning to build quickly and ship things that work.',
-      },
-    ],
-  },
-];
-
 export default function NowPage() {
   return (
     <div className="pt-24 pb-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
+
         {/* Header */}
         <div className="mb-14">
           <p className="text-gold text-xs font-medium tracking-widest uppercase mb-2">Now</p>
           <h1 className="text-4xl sm:text-5xl font-bold text-void-50 mb-4">
-            What I&apos;m doing<span className="text-gold">.</span>
+            What I&apos;m up to
           </h1>
           <p className="text-void-400 leading-relaxed max-w-lg">
-            A snapshot of where my attention is right now — work, training, reading, and what I&apos;m actively trying to get better at.
+            Work, training, reading, and what I&apos;m trying to get better at. Updated when things change.
           </p>
           <p className="text-void-500 text-xs mt-4">Last updated: {LAST_UPDATED}</p>
         </div>
 
-        {/* Sections */}
         <div className="flex flex-col gap-14">
-          {sections.map(({ eyebrow, title, items }) => (
-            <section key={eyebrow}>
-              <p className="text-gold text-xs font-medium tracking-widest uppercase mb-1">{eyebrow}</p>
-              <h2 className="text-lg font-semibold text-void-50 mb-5">{title}</h2>
-              <div className="flex flex-col gap-3">
-                {items.map(({ label, sub }) => (
-                  <div
-                    key={label}
-                    className="p-5 rounded-xl border border-surface-border bg-surface-card"
-                  >
-                    <div className="font-medium text-void-50 mb-1">{label}</div>
-                    {sub && <p className="text-sm text-void-400 leading-relaxed">{sub}</p>}
-                  </div>
-                ))}
-              </div>
-            </section>
-          ))}
-        </div>
 
-        {/* Footer note */}
-        <div className="mt-16 pt-8 border-t border-surface-border">
-          <p className="text-void-500 text-sm leading-relaxed">
-            Inspired by{' '}
-            <a
-              href="https://nownownow.com/about"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-void-400 hover:text-gold transition-colors underline underline-offset-2"
-            >
-              Derek Sivers&apos; /now page movement
-            </a>
-            . The idea: a single page that answers &ldquo;what are you up to these days?&rdquo;
-          </p>
+          {/* Building */}
+          <section>
+            <p className="text-gold text-xs font-medium tracking-widest uppercase mb-1">Building</p>
+            <h2 className="text-lg font-semibold text-void-50 mb-5">What I&apos;m working on</h2>
+            <div className="flex flex-col gap-3">
+              <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
+                <div className="flex items-center justify-between mb-1">
+                  <div className="font-medium text-void-50">Chapterly</div>
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Live</span>
+                </div>
+                <p className="text-sm text-void-400 leading-relaxed">
+                  The one I actually ship, use, and think about most. An AI reading tracker at{' '}
+                  <a href="https://www.getchapterly.com" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">getchapterly.com</a>
+                  {' '}— real users, Stripe subscriptions, and more features than I planned when I started.
+                </p>
+              </div>
+              <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
+                <div className="font-medium text-void-50 mb-1">Finance Dashboard</div>
+                <p className="text-sm text-void-400 leading-relaxed">
+                  Personal finance tool I built for myself. Portfolio tracking, budgets, net worth over time. Most of the hard parts are done.
+                </p>
+              </div>
+              <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
+                <div className="font-medium text-void-50 mb-1">More coming</div>
+                <p className="text-sm text-void-400 leading-relaxed">
+                  A couple other things in early stages. Nothing to announce yet.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Training */}
+          <section>
+            <p className="text-gold text-xs font-medium tracking-widest uppercase mb-1">Training</p>
+            <h2 className="text-lg font-semibold text-void-50 mb-5">What I&apos;m doing outside of work</h2>
+            <div className="flex flex-col gap-3">
+
+              {/* Marathon */}
+              <div className="rounded-xl border border-surface-border bg-surface-card overflow-hidden">
+                <div className="relative h-52 bg-void-900">
+                  <Image
+                    src="/marathon.jpg"
+                    alt="Marathon finish"
+                    fill
+                    className="object-cover object-center"
+                  />
+                </div>
+                <div className="p-5">
+                  <div className="font-medium text-void-50 mb-1">Marathon</div>
+                  <p className="text-sm text-void-400 leading-relaxed">
+                    Ran a full marathon. Hardest thing I&apos;ve done physically. The last six miles were a negotiation with myself. Still running.
+                  </p>
+                </div>
+              </div>
+
+              {/* Half-Ironman */}
+              <div className="rounded-xl border border-surface-border bg-surface-card overflow-hidden">
+                <div className="relative h-52 bg-void-900">
+                  <Image
+                    src="/halfironman.jpg"
+                    alt="Half-Ironman race"
+                    fill
+                    className="object-cover object-center"
+                  />
+                </div>
+                <div className="p-5">
+                  <div className="font-medium text-void-50 mb-1">Half-Ironman</div>
+                  <p className="text-sm text-void-400 leading-relaxed">
+                    1.2 mile swim, 56 mile bike, 13.1 mile run. Did it. The kind of thing that takes months of early mornings and makes you oddly calm about everything else.
+                  </p>
+                </div>
+              </div>
+
+              {/* Boxing */}
+              <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
+                <div className="font-medium text-void-50 mb-1">Boxing</div>
+                <p className="text-sm text-void-400 leading-relaxed">
+                  Training consistently with the goal of sparring. Not trying to fight anyone — just like having something physical that actually demands focus.
+                </p>
+              </div>
+
+            </div>
+          </section>
+
+          {/* Reading */}
+          <section>
+            <p className="text-gold text-xs font-medium tracking-widest uppercase mb-1">Reading</p>
+            <h2 className="text-lg font-semibold text-void-50 mb-5">What&apos;s on my nightstand</h2>
+            <div className="flex flex-col gap-3">
+              <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
+                <div className="font-medium text-void-50 mb-1">The Big Deal</div>
+                <p className="text-sm text-void-400 leading-relaxed">M&A deep cuts. Pairs well with what I do at BBVA.</p>
+              </div>
+              <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
+                <div className="font-medium text-void-50 mb-1">The Gates of Europe</div>
+                <p className="text-sm text-void-400 leading-relaxed">History of Ukraine. Dense and slow in the best way — the kind of book that makes geography feel urgent.</p>
+              </div>
+              <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
+                <div className="font-medium text-void-50 mb-1">Red Rising — Second Trilogy</div>
+                <p className="text-sm text-void-400 leading-relaxed">Iron Gold, Dark Age, Light Bringer. One of those series that ruins your sleep schedule.</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Learning */}
+          <section>
+            <p className="text-gold text-xs font-medium tracking-widest uppercase mb-1">Learning</p>
+            <h2 className="text-lg font-semibold text-void-50 mb-5">What I&apos;m studying</h2>
+            <div className="flex flex-col gap-3">
+              <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
+                <div className="font-medium text-void-50 mb-1">Banking products</div>
+                <p className="text-sm text-void-400 leading-relaxed">
+                  Term loans, revolving credit facilities, letters of credit, tax credit transfers. The actual plumbing of how deals get structured. Directly relevant to what I do at BBVA.
+                </p>
+              </div>
+              <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
+                <div className="font-medium text-void-50 mb-1">AI development tools</div>
+                <p className="text-sm text-void-400 leading-relaxed">
+                  Claude Code, VS Code, Supabase, Vercel, APIs. Less about learning to code — more about getting faster at shipping things that actually work.
+                </p>
+              </div>
+            </div>
+          </section>
+
         </div>
       </div>
     </div>
