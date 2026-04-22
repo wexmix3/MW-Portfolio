@@ -37,7 +37,7 @@ export const projects: Project[] = [
     tagline: 'Find and book basketball courts across New York City — 48 courts, real-time availability.',
     description:
       'CourtBook NYC is an interactive platform for discovering and booking basketball courts across all five NYC boroughs. It features a Mapbox-powered interactive map, Stripe payment integration for bookable indoor venues, a community runs board, and a seeded database of 48 courts sourced and categorized by neighborhood.',
-    status: 'live',
+    status: 'in-progress',
     coverImage: '/projects/courtbook.png',
     coverColor: '#0f2027',
     tech: ['Next.js 14', 'TypeScript', 'Supabase', 'Mapbox', 'Stripe', 'Tailwind CSS'],

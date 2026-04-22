@@ -21,9 +21,11 @@ const filters: { label: string; value: Category }[] = [
 export default function ProjectsPage() {
   const [active, setActive] = useState<Category>('all');
 
+  const liveProjects = projects.filter(p => p.status === 'live');
+
   const filtered = active === 'all'
-    ? projects
-    : projects.filter(p => p.category.includes(active));
+    ? liveProjects
+    : liveProjects.filter(p => p.category.includes(active));
 
   const sorted = [...filtered].sort((a, b) => a.order - b.order);
 
