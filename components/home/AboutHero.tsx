@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Mail, ArrowRight, FileText, MapPin } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '@/components/ui/BrandIcons';
@@ -91,8 +92,8 @@ export default function AboutHero() {
 
             {/* Identity card */}
             <div className="rounded-2xl border border-surface-border bg-surface-card p-5 flex items-center gap-4">
-              <div className="w-14 h-14 rounded-xl bg-gold/10 border border-gold/20 flex items-center justify-center flex-shrink-0">
-                <span className="font-display text-lg font-bold text-gold">MW</span>
+              <div className="w-14 h-14 rounded-xl overflow-hidden border border-gold/20 flex-shrink-0">
+                <Image src="/headshot.jpg" alt="Max Wexley" width={56} height={56} className="w-full h-full object-cover object-top" />
               </div>
               <div>
                 <p className="font-semibold text-void-50 text-sm">Max Wexley</p>

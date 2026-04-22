@@ -18,16 +18,20 @@ const filters: { label: string; value: Category }[] = [
   { label: 'Data', value: 'data' },
 ];
 
+const IN_PROGRESS_SHOWN = ['finance-dashboard', 'hoopers-hub'];
+
 export default function ProjectsPage() {
   const [active, setActive] = useState<Category>('all');
 
   const liveProjects = projects.filter(p => p.status === 'live');
+  const inProgressProjects = projects.filter(p => IN_PROGRESS_SHOWN.includes(p.slug));
 
-  const filtered = active === 'all'
+  const filteredLive = active === 'all'
     ? liveProjects
     : liveProjects.filter(p => p.category.includes(active));
 
-  const sorted = [...filtered].sort((a, b) => a.order - b.order);
+  const sortedLive = [...filteredLive].sort((a, b) => a.order - b.order);
+  const sortedInProgress = [...inProgressProjects].sort((a, b) => a.order - b.order);
 
   return (
     <div className="pt-24 pb-20">
@@ -35,9 +39,9 @@ export default function ProjectsPage() {
         {/* Header */}
         <div className="mb-12">
           <p className="text-gold text-xs font-medium tracking-widest uppercase mb-2">Portfolio</p>
-          <h1 className="text-4xl sm:text-5xl font-bold text-void-50 mb-4">All Projects</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold text-void-50 mb-4">Projects</h1>
           <p className="text-void-400 max-w-xl">
-            Every project I ship is fully deployed and built around a real problem I wanted solved.
+            Live projects are fully deployed and built around a real problem. In-progress ones are on the way.
           </p>
         </div>
 
@@ -58,11 +62,24 @@ export default function ProjectsPage() {
           ))}
         </div>
 
-        {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {sorted.map(project => (
+        {/* Live grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
+          {sortedLive.map(project => (
             <ProjectCard key={project.slug} project={project} />
           ))}
+        </div>
+
+        {/* In Progress section */}
+        <div>
+          <div className="flex items-center gap-3 mb-6">
+            <p className="text-void-400 text-xs font-medium tracking-widest uppercase">In Progress</p>
+            <div className="flex-1 h-px bg-surface-border" />
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {sortedInProgress.map(project => (
+              <ProjectCard key={project.slug} project={project} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

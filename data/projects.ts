@@ -131,6 +131,28 @@ export const projects: Project[] = [
     order: 5,
   },
   {
+    slug: 'hoopers-hub',
+    title: 'Hoopers Hub',
+    tagline: 'Find pickup basketball games and courts near you — built for NYC ballers.',
+    description:
+      'Hoopers Hub is a community platform for discovering pickup basketball runs, finding courts, and connecting with local players. Features an interactive map, game listings with skill-level filters, and a court database covering all five NYC boroughs.',
+    status: 'in-progress',
+    coverImage: '/projects/hoopers.png',
+    coverColor: '#0d1f0d',
+    tech: ['Next.js 14', 'TypeScript', 'Supabase', 'Mapbox', 'Tailwind CSS'],
+    category: ['web'],
+    highlights: [
+      'Interactive map for discovering courts and pickup runs across NYC boroughs',
+      'Game listings with skill-level filters and RSVP system',
+      'Court database with surface types, amenities, and real-time availability',
+    ],
+    lessons: [
+      'Community platforms need critical mass before they feel alive — seed data matters as much as the product',
+    ],
+    featured: false,
+    order: 7,
+  },
+  {
     slug: 'performance-os',
     title: 'Performance OS',
     tagline: 'Personal productivity operating system — goals, habits, and performance tracking.',

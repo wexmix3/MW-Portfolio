@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Mail, ArrowRight } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '@/components/ui/BrandIcons';
@@ -18,13 +19,18 @@ export default function AboutPage() {
     <div className="pt-24 pb-20">
       <div className="max-w-4xl mx-auto px-4 sm:px-6">
         {/* Header */}
-        <div className="mb-16">
-          <p className="text-gold text-xs font-medium tracking-widest uppercase mb-2">About</p>
-          <h1 className="text-5xl sm:text-6xl font-bold text-void-50 mb-2">
-            Max Wexley
-            <span className="text-gold">.</span>
-          </h1>
-          <p className="text-void-400 text-xl">{about.title}</p>
+        <div className="mb-16 flex items-center gap-6">
+          <div className="w-20 h-20 rounded-2xl overflow-hidden border border-surface-border flex-shrink-0">
+            <Image src="/headshot.jpg" alt="Max Wexley" width={80} height={80} className="w-full h-full object-cover object-top" />
+          </div>
+          <div>
+            <p className="text-gold text-xs font-medium tracking-widest uppercase mb-2">About</p>
+            <h1 className="text-5xl sm:text-6xl font-bold text-void-50 mb-2">
+              Max Wexley
+              <span className="text-gold">.</span>
+            </h1>
+            <p className="text-void-400 text-xl">{about.title}</p>
+          </div>
         </div>
 
         {/* Quick stats row */}
