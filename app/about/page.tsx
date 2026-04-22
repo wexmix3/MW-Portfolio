@@ -155,10 +155,10 @@ export default function AboutPage() {
 
         <div className="text-center">
           <Link
-            href="/chat"
+            href="/now"
             className="group inline-flex items-center gap-2 text-sm text-void-400 hover:text-gold transition-colors"
           >
-            Or chat with my AI to learn more
+            See what I&apos;m working on right now
             <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
           </Link>
         </div>
