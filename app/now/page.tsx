@@ -66,12 +66,13 @@ export default function NowPage() {
 
               {/* Half-Ironman */}
               <div className="rounded-xl border border-surface-border bg-surface-card overflow-hidden">
-                <div className="relative h-52 bg-void-900">
+                <div className="relative h-64 bg-void-900">
                   <Image
                     src="/halfironman.jpg"
                     alt="Ironman 70.3 Jones Beach finish line"
                     fill
-                    className="object-cover object-center"
+                    className="object-cover"
+                    style={{ objectPosition: 'center 35%' }}
                   />
                 </div>
                 <div className="p-5">
@@ -87,12 +88,13 @@ export default function NowPage() {
 
               {/* Marathon */}
               <div className="rounded-xl border border-surface-border bg-surface-card overflow-hidden">
-                <div className="relative h-52 bg-void-900">
+                <div className="relative h-64 bg-void-900">
                   <Image
                     src="/marathon.jpg"
                     alt="Philadelphia Marathon"
                     fill
-                    className="object-cover object-center"
+                    className="object-cover"
+                    style={{ objectPosition: '62% center' }}
                   />
                 </div>
                 <div className="p-5">
