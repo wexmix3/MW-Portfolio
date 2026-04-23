@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const rotatingPhrases = [
   'AI-powered products.',
@@ -55,13 +55,12 @@ export default function Hero() {
         {/* Eyebrow */}
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold/20 bg-gold/5 text-gold text-xs font-medium mb-8 animate-fade-in">
           <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse-slow" />
-          University of Michigan · Full-Stack Developer
+          Finance Analyst · Builder · New York City
         </div>
 
         {/* Name */}
         <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl text-void-50 mb-6 animate-fade-up">
           Max Wexley
-          <span className="text-gold">.</span>
         </h1>
 
         {/* Rotating phrase */}
@@ -75,7 +74,7 @@ export default function Hero() {
 
         {/* Sub-headline */}
         <p className="text-void-400 text-base sm:text-lg max-w-xl mx-auto mb-12 animate-fade-up delay-200">
-          Production apps with Claude AI at the center — shipped solo, deployed globally.
+          Finance by day. Builder by nature. Currently at BBVA — and shipping real software on the side.
         </p>
 
         {/* CTAs */}
@@ -88,11 +87,10 @@ export default function Hero() {
             <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
           </Link>
           <Link
-            href="/chat"
+            href="/about"
             className="group flex items-center gap-2 px-6 py-3 rounded-lg border border-surface-border text-void-200 text-sm hover:border-gold/40 hover:text-gold transition-all"
           >
-            <Sparkles size={15} className="text-gold" />
-            Chat with my AI
+            About me
           </Link>
         </div>
       </div>

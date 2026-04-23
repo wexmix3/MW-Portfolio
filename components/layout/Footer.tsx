@@ -8,9 +8,9 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex flex-col items-center sm:items-start gap-1">
           <span className="font-display text-void-50">
-            Max Wexley<span className="text-gold">.</span>
+            Max Wexley
           </span>
-          <span className="text-xs text-void-400">University of Michigan · Full-Stack & AI</span>
+          <span className="text-xs text-void-400">Finance by day. Builder by nature.</span>
         </div>
 
         <div className="flex items-center gap-4">
@@ -44,7 +44,7 @@ export default function Footer() {
         <div className="flex items-center gap-4 text-xs text-void-500">
           <Link href="/projects" className="hover:text-void-300 transition-colors">Projects</Link>
           <Link href="/about"    className="hover:text-void-300 transition-colors">About</Link>
-          <Link href="/chat"     className="hover:text-void-300 transition-colors">Chat with AI</Link>
+          <Link href="/now"      className="hover:text-void-300 transition-colors">Now</Link>
         </div>
       </div>
     </footer>

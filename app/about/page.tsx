@@ -8,7 +8,7 @@ import { projects } from '@/data/projects';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Max Wexley — University of Michigan developer building AI-powered apps.',
+  description: 'Max Wexley — Finance analyst at BBVA and self-taught builder. Finance by day, building by nature.',
 };
 
 export default function AboutPage() {

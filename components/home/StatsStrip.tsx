@@ -11,8 +11,8 @@ export default function StatsStrip({ github, chapterlyUsers }: Props) {
   const stats = [
     {
       icon: <Package size={18} className="text-gold" />,
-      value: `${projects.length}`,
-      label: 'Projects shipped',
+      value: `${projects.filter(p => p.status === 'live').length}`,
+      label: 'Apps live',
       live: false,
     },
     {

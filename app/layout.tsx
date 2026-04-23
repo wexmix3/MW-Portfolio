@@ -3,6 +3,7 @@ import { Inter, Instrument_Serif } from 'next/font/google';
 import './globals.css';
 import Nav from '@/components/layout/Nav';
 import Footer from '@/components/layout/Footer';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
