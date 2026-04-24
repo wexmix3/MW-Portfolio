@@ -74,7 +74,7 @@ export default function Hero() {
 
         {/* Sub-headline */}
         <p className="text-void-400 text-base sm:text-lg max-w-xl mx-auto mb-12 animate-fade-up delay-200">
-          Finance by day. Builder by nature. Currently at BBVA — and shipping real software on the side.
+          I work in finance and I build software. Interested in energy, history, geopolitics, technology, and what happens when ambition meets the right tools.
         </p>
 
         {/* CTAs */}

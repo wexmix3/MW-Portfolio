@@ -10,19 +10,19 @@ export const about = {
   headline: 'Finance by day. Builder by nature.',
 
   bio: [
-    "I'm an analyst at BBVA in New York, working on energy infrastructure — project finance transactions, structured credit, and tax equity deals across the energy transition. The work is complex, high-stakes, and forces you to think clearly about risk and capital.",
-    "In parallel, I build software. Not as a pivot — as a compulsion. When Goodreads felt like it was stuck in 2012, I built Chapterly: a full AI-powered reading tracker with real users, Stripe subscriptions, and a gamification engine. When I wanted to understand my finances better, I built a dashboard. When I needed automation at work, I built that too.",
-    "Most people in finance can't ship software. Most people who ship software don't understand deal structures. I'm trying to be the rare person who can do both — and this site is evidence of that.",
+    "I work in finance, but that's only part of it. I'm interested in energy, history, geopolitics, technology, fitness — and what happens when those things start to connect. My day job is at BBVA in New York, working on energy infrastructure deals. The work is serious and I take it seriously.",
+    "Outside of that, I build software. Not because I'm trying to become a developer — because I find the tools we have right now genuinely exciting and I want to use them to make things that are actually useful. Chapterly started because I wanted a better reading app. I built it, shipped it, and people use it.",
+    "This site exists because I think it's worth putting yourself out there. These are my projects, my interests, my goals. I'm chasing them.",
   ],
 
   interests: [
-    { label: 'Basketball', icon: '🏀', note: 'Play regularly — built CourtBook NYC to solve the court discovery problem' },
-    { label: 'Books', icon: '📚', note: 'Avid reader — built Chapterly because existing apps were stuck in 2012' },
-    { label: 'Finance', icon: '📊', note: 'Cover energy clients at BBVA — LNG, renewables, tax equity' },
-    { label: 'Building', icon: '🛠️', note: 'Teach myself whatever I need to make the thing I want exist' },
+    { label: 'Energy & Finance', icon: '⚡', note: 'LNG, renewables, tax equity — where capital meets the energy transition' },
+    { label: 'History & Geopolitics', icon: '🌍', note: 'Currently reading The Gates of Europe. Geography shapes everything.' },
+    { label: 'Building Software', icon: '🛠️', note: 'Fascinated by what\'s possible right now. Learn what I need, ship what I want.' },
+    { label: 'Endurance Sports', icon: '🏃', note: 'Philadelphia Marathon (3:13) and Ironman 70.3 Jones Beach (5:45)' },
   ],
 
-  availability: 'Currently at BBVA in New York. Always interested in connecting with people working at the intersection of finance and technology.',
+  availability: 'Based in New York. Always open to connecting with people who are building interesting things or thinking about the intersection of finance and technology.',
 
   chatSystemPrompt: `You are an AI assistant representing Max Wexley. Answer questions about Max's background, work, projects, and interests concisely and accurately. Be direct and specific. If asked something you don't know, say so briefly.
 

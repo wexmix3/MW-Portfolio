@@ -20,7 +20,7 @@ export default function NowPage() {
             What I&apos;m up to
           </h1>
           <p className="text-void-400 leading-relaxed max-w-lg">
-            Work, training, reading, and what I&apos;m trying to get better at. Updated when things change.
+            A snapshot of what I&apos;m working on, reading, training for, and learning. Updated when things change.
           </p>
           <p className="text-void-500 text-xs mt-4">Last updated: {LAST_UPDATED}</p>
         </div>
@@ -38,21 +38,21 @@ export default function NowPage() {
                   <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Live</span>
                 </div>
                 <p className="text-sm text-void-400 leading-relaxed">
-                  The one I actually ship, use, and think about most. An AI reading tracker at{' '}
+                  An AI reading tracker I built because I wanted one. Live at{' '}
                   <a href="https://www.getchapterly.com" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">getchapterly.com</a>
-                  {' '}— real users, Stripe subscriptions, and more features than I planned when I started.
+                  {' '}— real users, real subscriptions. Still adding to it.
                 </p>
               </div>
               <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
                 <div className="font-medium text-void-50 mb-1">Finance Dashboard</div>
                 <p className="text-sm text-void-400 leading-relaxed">
-                  Personal finance tool I built for myself. Portfolio tracking, budgets, net worth over time. Most of the hard parts are done.
+                  Personal finance tool I built for myself. Portfolio tracking, budgets, net worth over time. Getting close.
                 </p>
               </div>
               <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
                 <div className="font-medium text-void-50 mb-1">More coming</div>
                 <p className="text-sm text-void-400 leading-relaxed">
-                  A couple other things in early stages. Nothing to announce yet.
+                  A few other things in motion. Not ready to talk about yet.
                 </p>
               </div>
             </div>
@@ -81,7 +81,7 @@ export default function NowPage() {
                     <span className="text-xs text-gold font-medium">5:45</span>
                   </div>
                   <p className="text-sm text-void-400 leading-relaxed">
-                    1.2 mile swim, 56 mile bike, 13.1 mile run. The kind of thing that takes months of early mornings and makes you oddly calm about everything else.
+                    1.2 mile swim, 56 mile bike, 13.1 mile run. Months of early mornings to get there. Worth it.
                   </p>
                 </div>
               </div>
@@ -103,7 +103,7 @@ export default function NowPage() {
                     <span className="text-xs text-gold font-medium">3:13</span>
                   </div>
                   <p className="text-sm text-void-400 leading-relaxed">
-                    26.2 miles through Philly. The last six were a negotiation with myself. 3:13 is Boston Qualifier territory — something I&apos;m still quietly proud of.
+                    26.2 miles through Philly. The last six were rough. 3:13 — Boston Qualifier. Proud of that one.
                   </p>
                 </div>
               </div>
@@ -112,7 +112,7 @@ export default function NowPage() {
               <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
                 <div className="font-medium text-void-50 mb-1">Boxing</div>
                 <p className="text-sm text-void-400 leading-relaxed">
-                  Training consistently with the goal of sparring. Not trying to fight anyone — just like having something physical that actually demands focus.
+                  Training consistently. Goal is to spar. I like having something physical that demands real focus.
                 </p>
               </div>
 
@@ -126,15 +126,15 @@ export default function NowPage() {
             <div className="flex flex-col gap-3">
               <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
                 <div className="font-medium text-void-50 mb-1">The Big Deal</div>
-                <p className="text-sm text-void-400 leading-relaxed">M&A deep cuts. Pairs well with what I do at BBVA.</p>
+                <p className="text-sm text-void-400 leading-relaxed">Inside the world of major M&A. Relevant to what I do and genuinely interesting.</p>
               </div>
               <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
                 <div className="font-medium text-void-50 mb-1">The Gates of Europe</div>
-                <p className="text-sm text-void-400 leading-relaxed">History of Ukraine. Dense and slow in the best way — the kind of book that makes geography feel urgent.</p>
+                <p className="text-sm text-void-400 leading-relaxed">History of Ukraine. Dense, slow, and worth it. Geography shapes more than people think.</p>
               </div>
               <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
                 <div className="font-medium text-void-50 mb-1">Red Rising — Second Trilogy</div>
-                <p className="text-sm text-void-400 leading-relaxed">Iron Gold, Dark Age, Light Bringer. One of those series that ruins your sleep schedule.</p>
+                <p className="text-sm text-void-400 leading-relaxed">Iron Gold, Dark Age, Light Bringer. The kind of series that keeps you up later than you planned.</p>
               </div>
             </div>
           </section>
@@ -147,13 +147,13 @@ export default function NowPage() {
               <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
                 <div className="font-medium text-void-50 mb-1">Banking products</div>
                 <p className="text-sm text-void-400 leading-relaxed">
-                  Term loans, revolving credit facilities, letters of credit, tax credit transfers. The actual plumbing of how deals get structured. Directly relevant to what I do at BBVA.
+                  Term loans, revolving credit facilities, letters of credit, tax credit transfers. The mechanics behind how deals actually get done.
                 </p>
               </div>
               <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
                 <div className="font-medium text-void-50 mb-1">AI development tools</div>
                 <p className="text-sm text-void-400 leading-relaxed">
-                  Claude Code, VS Code, Supabase, Vercel, APIs. Less about learning to code — more about getting faster at shipping things that actually work.
+                  Claude Code, VS Code, Supabase, Vercel. The tools available right now are remarkable. I want to get as good as I can at using them.
                 </p>
               </div>
             </div>
