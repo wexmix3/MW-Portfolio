@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Mail, ArrowRight, FileText, MapPin } from 'lucide-react';
+import { ArrowRight, FileText, MapPin } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '@/components/ui/BrandIcons';
 import { about } from '@/data/about';
 
@@ -52,11 +52,18 @@ export default function AboutHero() {
 
             {/* CTA row */}
             <div className="flex flex-wrap gap-3">
+              <Link
+                href="/projects"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gold text-void-950 font-semibold text-sm hover:bg-gold-light transition-colors"
+              >
+                See my work
+                <ArrowRight size={15} />
+              </Link>
               <a
                 href={about.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gold text-void-950 font-semibold text-sm hover:bg-gold-light transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-surface-border text-void-200 text-sm hover:border-gold/40 hover:text-gold transition-all"
               >
                 <LinkedinIcon width={16} height={16} />
                 LinkedIn
@@ -76,13 +83,6 @@ export default function AboutHero() {
               >
                 <GithubIcon width={15} height={15} />
                 GitHub
-              </a>
-              <a
-                href={`mailto:${about.email}`}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-surface-border text-void-200 text-sm hover:border-gold/40 hover:text-gold transition-all"
-              >
-                <Mail size={15} />
-                Email
               </a>
             </div>
           </div>

@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Mail, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '@/components/ui/BrandIcons';
 import { about } from '@/data/about';
+import ContactForm from '@/components/ui/ContactForm';
 import { projects } from '@/data/projects';
 
 export const metadata: Metadata = {
@@ -127,17 +128,12 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Availability + contact */}
+        {/* Contact */}
         <div className="rounded-xl border border-gold/20 bg-gold/5 p-6 mb-10">
-          <h2 className="text-lg font-semibold text-void-50 mb-2">Availability</h2>
-          <p className="text-void-300 text-sm leading-relaxed mb-5">{about.availability}</p>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href={`mailto:${about.email}`}
-              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gold text-void-950 text-sm font-medium hover:bg-gold-light transition-colors"
-            >
-              <Mail size={14} /> Get in touch
-            </a>
+          <h2 className="text-lg font-semibold text-void-50 mb-2">Get in touch</h2>
+          <p className="text-void-300 text-sm leading-relaxed mb-6">{about.availability}</p>
+          <ContactForm />
+          <div className="flex flex-wrap gap-3 mt-6 pt-6 border-t border-gold/10">
             <a
               href={about.github}
               target="_blank"
