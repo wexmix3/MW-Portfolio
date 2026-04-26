@@ -43,8 +43,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-4 text-xs text-void-500">
           <Link href="/projects" className="hover:text-void-300 transition-colors">Projects</Link>
-          <Link href="/about"    className="hover:text-void-300 transition-colors">About</Link>
-          <Link href="/now"      className="hover:text-void-300 transition-colors">Now</Link>
+          <Link href="/resume"   className="hover:text-void-300 transition-colors">Resume</Link>
         </div>
       </div>
     </footer>
