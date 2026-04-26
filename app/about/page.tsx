@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Heart, ExternalLink } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from '@/components/ui/BrandIcons';
 import { about } from '@/data/about';
 import ContactForm from '@/components/ui/ContactForm';
@@ -125,6 +125,77 @@ export default function AboutPage() {
               <div className="font-semibold text-void-50">University of Michigan</div>
               <div className="text-sm text-void-400">Ann Arbor, MI</div>
             </div>
+          </div>
+        </div>
+
+        {/* Embrace Mental Health Foundation */}
+        <div className="mb-14">
+          <h2 className="text-xl font-semibold text-void-50 mb-5">Cause</h2>
+
+          {/* Header card */}
+          <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/5 p-5 mb-4">
+            <div className="flex items-start justify-between gap-4 mb-3">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                  <Heart size={18} className="text-emerald-400" />
+                </div>
+                <div>
+                  <div className="font-semibold text-void-50">Embrace Mental Health Foundation</div>
+                  <div className="text-xs text-emerald-400 font-medium mt-0.5">Co-Founder</div>
+                </div>
+              </div>
+              <a
+                href="https://www.embracementalhealthfoundation.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-xs text-void-400 hover:text-emerald-400 transition-colors flex-shrink-0 mt-1"
+              >
+                Visit site <ExternalLink size={11} />
+              </a>
+            </div>
+            <p className="text-sm text-void-300 leading-relaxed mb-4">
+              We fund clinics that provide pro bono mental health counseling to those who can&apos;t afford it —
+              channeling endurance racing into real psychiatric access. Roughly 67% of young adults with anxiety
+              or depression never receive treatment. We&apos;re working to close that gap.
+            </p>
+            <div className="flex items-center gap-2 px-3 py-2 rounded-lg bg-emerald-500/10 border border-emerald-500/20 w-fit">
+              <span className="text-lg font-bold text-emerald-400">$13,555</span>
+              <span className="text-xs text-void-400">raised across 3 campaigns</span>
+            </div>
+          </div>
+
+          {/* Campaign cards */}
+          <div className="flex flex-col gap-3">
+            {[
+              {
+                event: '2024 AACR Philadelphia Marathon',
+                raised: '$1,800',
+                impact: '10 psychiatric visits at the Josselyn Center + 24 hours of behavioral programming at CHOP\'s Department of Psychiatry and Behavioral Sciences',
+              },
+              {
+                event: '2025 Christie Clinic Illinois Marathon',
+                raised: '$1,555',
+                impact: '15 psychiatric visits at the Josselyn Center',
+              },
+              {
+                event: 'Phi Gamma Nu Beta Pi — Compete for a Cause',
+                raised: '$10,200',
+                impact: '115 mental health screenings at the Rosecrance Center, Champaign, IL',
+              },
+            ].map(({ event, raised, impact }) => (
+              <div key={event} className="flex gap-4 p-4 rounded-xl border border-surface-border bg-surface-card">
+                <div className="flex-shrink-0 mt-0.5">
+                  <div className="w-2 h-2 rounded-full bg-emerald-400 mt-1.5" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5 mb-1">
+                    <span className="text-sm font-semibold text-void-50">{event}</span>
+                    <span className="text-sm font-bold text-emerald-400">{raised}</span>
+                  </div>
+                  <p className="text-xs text-void-400 leading-relaxed">{impact}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
