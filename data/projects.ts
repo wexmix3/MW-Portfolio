@@ -4,7 +4,7 @@ export const projects: Project[] = [
   {
     slug: 'chapterly',
     title: 'Chapterly',
-    tagline: 'AI-powered reading companion with gamification, social features, and smart insights.',
+    tagline: 'An AI-fueled book tracker built to give you real insight and become a better reader.',
     description:
       'Chapterly is a full-stack reading tracker that uses Claude AI to generate personalized book insights, predict reading moods, and surface hidden themes. It features an XP/leveling system, reading streaks, social follows, buddy reads, a live reading timer, Goodreads CSV import, and Stripe-powered premium subscriptions.',
     status: 'live',

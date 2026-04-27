@@ -32,7 +32,7 @@ export default function AboutHero() {
             {/* Title + location */}
             <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-6">
               <p className="text-lg sm:text-xl text-void-300 font-medium">
-                Finance by day. Builder by nature.
+                Finance professional during the day, but a builder by nature.
               </p>
               <span className="hidden sm:block w-1 h-1 rounded-full bg-void-600" />
               <span className="flex items-center gap-1 text-sm text-void-500">

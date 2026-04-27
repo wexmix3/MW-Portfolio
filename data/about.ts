@@ -7,12 +7,12 @@ export const about = {
   github: 'https://github.com/wexmix3',
   linkedin: 'https://linkedin.com/in/max-wexley',
 
-  headline: 'Finance by day. Builder by nature.',
+  headline: 'Finance professional during the day, but a builder by nature.',
 
   bio: [
     "I work in finance, but that's only part of it. I'm interested in energy, history, geopolitics, technology, fitness — and what happens when those things start to connect. My day job is at BBVA in New York, working on energy infrastructure deals. The work is serious and I take it seriously.",
     "Outside of that, I build software. Not because I'm trying to become a developer — because I find the tools we have right now genuinely exciting and I want to use them to make things that are actually useful. Chapterly started because I wanted a better reading app. I built it, shipped it, and people use it.",
-    "This site exists because I think it's worth putting yourself out there. These are my projects, my interests, my goals. I'm chasing them.",
+    "With ambition and access to the right tools, I can't help but try to build things that generate positive impact. This site is a reflection of that.",
   ],
 
   interests: [
@@ -22,7 +22,7 @@ export const about = {
     { label: 'Endurance Sports', icon: '🏃', note: 'Philadelphia Marathon (3:13) and Ironman 70.3 Jones Beach (5:45)' },
   ],
 
-  availability: 'Based in New York. Always open to connecting with people who are building interesting things or thinking about the intersection of finance and technology.',
+  availability: 'Based in New York. Always open to connecting with people who have similar interests or questions about what I\'m working on.',
 
   chatSystemPrompt: `You are an AI assistant representing Max Wexley. Answer questions about Max's background, work, projects, and interests concisely and accurately. Be direct and specific. If asked something you don't know, say so briefly.
 

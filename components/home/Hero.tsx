@@ -8,7 +8,7 @@ const rotatingPhrases = [
   'AI-powered products.',
   'full-stack web apps.',
   'things that ship.',
-  'what I can\'t stop thinking about.',
+  'what I can\'t stop working on.',
 ];
 
 export default function Hero() {
@@ -74,7 +74,7 @@ export default function Hero() {
 
         {/* Sub-headline */}
         <p className="text-void-400 text-base sm:text-lg max-w-xl mx-auto mb-12 animate-fade-up delay-200">
-          I work in finance and I build software. Interested in energy, history, geopolitics, technology, and what happens when ambition meets the right tools.
+          Finance professional during the day, but a builder by nature. With ambition and access to the right tools, I can&apos;t help but try to build things that generate positive impact.
         </p>
 
         {/* CTAs */}

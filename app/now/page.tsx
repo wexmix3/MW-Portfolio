@@ -72,7 +72,7 @@ export default function NowPage() {
                     alt="Ironman 70.3 Jones Beach finish line"
                     fill
                     className="object-cover"
-                    style={{ objectPosition: 'center 35%' }}
+                    style={{ objectPosition: 'center 28%' }}
                   />
                 </div>
                 <div className="p-5">
@@ -94,7 +94,7 @@ export default function NowPage() {
                     alt="Philadelphia Marathon"
                     fill
                     className="object-cover"
-                    style={{ objectPosition: '62% center' }}
+                    style={{ objectPosition: '50% 40%' }}
                   />
                 </div>
                 <div className="p-5">
