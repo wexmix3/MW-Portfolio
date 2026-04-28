@@ -198,14 +198,8 @@ export default function ProjectsPage() {
 
             {/* Boxing */}
             <div className="rounded-xl border border-surface-border bg-surface-card overflow-hidden">
-              <div className="relative h-64 bg-void-900">
-                <Image
-                  src="/boxing.jpg"
-                  alt="Boxing training"
-                  fill
-                  className="object-cover"
-                  style={{ objectPosition: 'center 20%' }}
-                />
+              <div className="h-64 bg-void-900 flex items-center justify-center">
+                <span className="text-void-600 text-sm tracking-widest uppercase">Coming Soon</span>
               </div>
               <div className="p-5">
                 <div className="font-semibold text-void-50 mb-1">Boxing</div>
