@@ -160,7 +160,7 @@ export default function ProjectsPage() {
                   alt="Ironman 70.3 Jones Beach finish line"
                   fill
                   className="object-cover"
-                  style={{ objectPosition: 'center 35%' }}
+                  style={{ objectPosition: 'center 10%' }}
                 />
               </div>
               <div className="p-5">
@@ -182,7 +182,7 @@ export default function ProjectsPage() {
                   alt="Philadelphia Marathon"
                   fill
                   className="object-cover"
-                  style={{ objectPosition: '62% center' }}
+                  style={{ objectPosition: '62% 15%' }}
                 />
               </div>
               <div className="p-5">
@@ -197,11 +197,22 @@ export default function ProjectsPage() {
             </div>
 
             {/* Boxing */}
-            <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
-              <div className="font-semibold text-void-50 mb-1">Boxing</div>
-              <p className="text-sm text-void-400 leading-relaxed">
-                Training consistently. Goal is to spar. I like having something physical that demands real focus.
-              </p>
+            <div className="rounded-xl border border-surface-border bg-surface-card overflow-hidden">
+              <div className="relative h-64 bg-void-900">
+                <Image
+                  src="/boxing.jpg"
+                  alt="Boxing training"
+                  fill
+                  className="object-cover"
+                  style={{ objectPosition: 'center 20%' }}
+                />
+              </div>
+              <div className="p-5">
+                <div className="font-semibold text-void-50 mb-1">Boxing</div>
+                <p className="text-sm text-void-400 leading-relaxed">
+                  Training consistently. Goal is to spar. I like having something physical that demands real focus.
+                </p>
+              </div>
             </div>
           </div>
         </section>

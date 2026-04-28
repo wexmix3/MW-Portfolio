@@ -65,7 +65,7 @@ async function fetchChapterlyUsers(): Promise<number | null> {
     });
     if (!res.ok) return null;
     const data = await res.json();
-    return data.userCount ?? null;
+    return typeof data.count === 'number' ? data.count : null;
   } catch {
     return null;
   }

@@ -9,12 +9,26 @@ const buildingSkills = ['Next.js', 'TypeScript', 'Supabase', 'Claude AI', 'Strip
 
 export default function AboutHero() {
   return (
-    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-grid-pattern bg-grid">
+    <section className="relative min-h-[100svh] flex flex-col overflow-hidden bg-grid-pattern bg-grid">
+      {/* NYC skyline banner */}
+      <div className="relative w-full h-52 sm:h-64 flex-shrink-0 overflow-hidden mt-14">
+        <Image
+          src="https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=1920&q=80"
+          alt="New York City skyline"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-void-950/30 via-void-950/20 to-void-950" />
+        <div className="absolute inset-0 bg-gradient-to-r from-void-950/60 via-transparent to-void-950/60" />
+      </div>
+
       {/* Radial glow */}
       <div className="absolute inset-0 bg-gradient-radial from-gold/5 via-transparent to-transparent pointer-events-none" />
 
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 py-24 lg:py-32">
-        <div className="grid lg:grid-cols-[1fr_340px] gap-12 lg:gap-16 items-center">
+      {/* Main content */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 py-12 lg:py-16 flex-1">
+        <div className="grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-16 items-start">
 
           {/* ── Left column ── */}
           <div className="animate-fade-up">
@@ -90,15 +104,24 @@ export default function AboutHero() {
           {/* ── Right column ── */}
           <div className="flex flex-col gap-4 animate-fade-up delay-200">
 
-            {/* Identity card */}
-            <div className="rounded-2xl border border-surface-border bg-surface-card p-5 flex items-center gap-4">
-              <div className="w-14 h-14 rounded-xl overflow-hidden border border-gold/20 flex-shrink-0">
-                <Image src="/headshot.jpg" alt="Max Wexley" width={56} height={56} className="w-full h-full object-cover object-top" />
+            {/* Large headshot card */}
+            <div className="rounded-2xl border border-surface-border bg-surface-card overflow-hidden">
+              <div className="relative h-72 w-full">
+                <Image
+                  src="/headshot.jpg"
+                  alt="Max Wexley"
+                  fill
+                  className="object-cover"
+                  style={{ objectPosition: 'center 15%' }}
+                  sizes="420px"
+                />
               </div>
-              <div>
-                <p className="font-semibold text-void-50 text-sm">Max Wexley</p>
-                <p className="text-xs text-void-400 mt-0.5">BBVA · Energy Client Coverage</p>
-                <p className="text-xs text-void-500 mt-0.5">Michigan &apos;24 · SIE · Series 7 · Series 63</p>
+              <div className="p-4 border-t border-surface-border flex items-center gap-3">
+                <div>
+                  <p className="font-semibold text-void-50 text-sm">Max Wexley</p>
+                  <p className="text-xs text-void-400 mt-0.5">BBVA · Energy Client Coverage</p>
+                  <p className="text-xs text-void-500 mt-0.5">Michigan &apos;24 · SIE · Series 7 · Series 63</p>
+                </div>
               </div>
             </div>
 

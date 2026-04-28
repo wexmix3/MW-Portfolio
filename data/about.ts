@@ -5,12 +5,12 @@ export const about = {
   location: 'New York City, NY',
   email: 'maxmwexley@gmail.com',
   github: 'https://github.com/wexmix3',
-  linkedin: 'https://linkedin.com/in/max-wexley',
+  linkedin: 'https://www.linkedin.com/in/max-wexley',
 
   headline: 'Finance professional during the day, but a builder by nature.',
 
   bio: [
-    "I work in finance, but that's only part of it. I'm interested in energy, history, geopolitics, technology, fitness — and what happens when those things start to connect. My day job is at BBVA in New York, working on energy infrastructure deals. The work is serious and I take it seriously.",
+    "I work in finance, but that's only part of it. I'm interested in energy, history, geopolitics, technology, fitness — and what happens when those things start to connect. My day job is at BBVA in New York, working on energy infrastructure deals.",
     "Outside of that, I build software. Not because I'm trying to become a developer — because I find the tools we have right now genuinely exciting and I want to use them to make things that are actually useful. Chapterly started because I wanted a better reading app. I built it, shipped it, and people use it.",
     "With ambition and access to the right tools, I can't help but try to build things that generate positive impact. This site is a reflection of that.",
   ],

@@ -42,7 +42,7 @@ export default function Nav() {
             </Link>
           ))}
           <a
-            href="https://linkedin.com/in/maxwexley"
+            href="https://www.linkedin.com/in/max-wexley"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-sm px-3 py-1.5 rounded-md border border-surface-border text-void-200 hover:border-gold hover:text-gold transition-all"
@@ -78,7 +78,7 @@ export default function Nav() {
             </Link>
           ))}
           <a
-            href="https://linkedin.com/in/maxwexley"
+            href="https://www.linkedin.com/in/max-wexley"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-sm text-void-300"
