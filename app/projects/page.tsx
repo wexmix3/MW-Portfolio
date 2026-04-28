@@ -160,7 +160,7 @@ export default function ProjectsPage() {
                   alt="Ironman 70.3 Jones Beach finish line"
                   fill
                   className="object-cover"
-                  style={{ objectPosition: 'center 55%' }}
+                  style={{ objectPosition: 'center 35%' }}
                 />
               </div>
               <div className="p-5">
