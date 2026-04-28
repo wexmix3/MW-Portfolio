@@ -131,6 +131,26 @@ export const projects: Project[] = [
     order: 5,
   },
   {
+    slug: 'networking-crm',
+    title: 'LinkedIn CRM',
+    tagline: 'Personal relationship manager for professional networking — built on top of LinkedIn data.',
+    description:
+      'A lightweight CRM designed to make professional networking intentional rather than passive. Track contacts, log interactions, set follow-up reminders, and surface connections you haven\'t spoken to in a while — all in one place.',
+    status: 'in-progress',
+    coverImage: '/projects/networking.png',
+    coverColor: '#0a1628',
+    tech: ['Next.js', 'TypeScript', 'Supabase', 'Tailwind CSS'],
+    category: ['web'],
+    highlights: [
+      'Contact database with interaction history and follow-up tracking',
+      'Surfaces dormant connections you haven\'t engaged with in a defined period',
+      'Clean card-based UI for quickly logging notes and next actions',
+    ],
+    lessons: [],
+    featured: false,
+    order: 8,
+  },
+  {
     slug: 'hoopers-hub',
     title: 'Hoopers Hub',
     tagline: 'Find pickup basketball games and courts near you — built for NYC ballers.',
