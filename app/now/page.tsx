@@ -103,7 +103,7 @@ export default function NowPage() {
                     <span className="text-xs text-gold font-medium">3:13</span>
                   </div>
                   <p className="text-sm text-void-400 leading-relaxed">
-                    26.2 miles through Philly. The last six were rough. 3:13 — Boston Qualifier. Proud of that one.
+                    26.2 miles through Philly. The last six were rough. 3:13. Proud of that one.
                   </p>
                 </div>
               </div>

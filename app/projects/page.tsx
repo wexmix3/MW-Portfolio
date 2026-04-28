@@ -160,7 +160,7 @@ export default function ProjectsPage() {
                   alt="Ironman 70.3 Jones Beach finish line"
                   fill
                   className="object-cover"
-                  style={{ objectPosition: 'center 10%' }}
+                  style={{ objectPosition: 'center 55%' }}
                 />
               </div>
               <div className="p-5">
@@ -188,10 +188,10 @@ export default function ProjectsPage() {
               <div className="p-5">
                 <div className="flex items-center justify-between mb-1">
                   <div className="font-semibold text-void-50">Philadelphia Marathon</div>
-                  <span className="text-sm font-bold text-gold">3:13 — BQ</span>
+                  <span className="text-sm font-bold text-gold">3:13</span>
                 </div>
                 <p className="text-sm text-void-400 leading-relaxed">
-                  26.2 miles through Philly. The last six were rough. 3:13 — Boston Qualifier. Proud of that one.
+                  26.2 miles through Philly. The last six were rough. 3:13. Proud of that one.
                 </p>
               </div>
             </div>
