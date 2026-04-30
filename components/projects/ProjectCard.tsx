@@ -1,12 +1,15 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
 import type { Project } from '@/types';
 import TechBadge from './TechBadge';
 import StatusBadge from './StatusBadge';
 
 export default function ProjectCard({ project }: { project: Project }) {
+  const hasScreenshot = project.coverImage?.startsWith('https://');
+
   return (
     <Link
       href={`/projects/${project.slug}`}
@@ -16,9 +19,19 @@ export default function ProjectCard({ project }: { project: Project }) {
         className="h-40 flex items-center justify-center relative overflow-hidden"
         style={{ background: project.coverColor }}
       >
-        <span className="font-display text-5xl text-white/15 group-hover:text-white/25 transition-colors select-none">
-          {project.title[0]}
-        </span>
+        {hasScreenshot ? (
+          <Image
+            src={project.coverImage}
+            alt={`${project.title} screenshot`}
+            fill
+            className="object-cover object-top"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        ) : (
+          <span className="font-display text-5xl text-white/15 group-hover:text-white/25 transition-colors select-none">
+            {project.title[0]}
+          </span>
+        )}
         {project.liveUrl && (
           <a
             href={project.liveUrl}

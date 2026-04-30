@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Technology, philanthropy, and athletics — what Max Wexley builds and pursues.',
 };
 
-const IN_PROGRESS_SHOWN = ['finance-dashboard', 'networking-crm'];
+const IN_PROGRESS_SHOWN = ['finance-dashboard', 'networking-crm', 'competitor-analysis'];
 
 const campaigns = [
   {
