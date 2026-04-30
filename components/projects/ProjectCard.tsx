@@ -8,7 +8,7 @@ import TechBadge from './TechBadge';
 import StatusBadge from './StatusBadge';
 
 export default function ProjectCard({ project }: { project: Project }) {
-  const hasScreenshot = project.coverImage?.startsWith('https://');
+  const hasScreenshot = project.coverImage?.startsWith('/projects/');
 
   return (
     <Link
