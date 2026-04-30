@@ -182,7 +182,7 @@ export const projects: Project[] = [
       'A full-stack AI tool that takes a target company URL, scrapes its site and search results using Firecrawl and Tavily, then runs the findings through Claude to produce a structured competitive teardown — pricing, positioning, strengths, weaknesses, and strategic recommendations — exported as a clean PDF report.',
     status: 'in-progress',
     coverImage: '/projects/competitor.png',
-    coverColor: '#0d1117',
+    coverColor: '#f8f9fa',
     tech: ['Next.js', 'TypeScript', 'Anthropic Claude', 'Firecrawl', 'Tavily', 'React PDF'],
     category: ['web', 'ai'],
     highlights: [
