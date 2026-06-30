@@ -11,7 +11,8 @@ export const metadata: Metadata = {
   description: 'Technology, philanthropy, and athletics — what Max Wexley builds and pursues.',
 };
 
-const IN_PROGRESS_SHOWN = ['finance-dashboard', 'networking-crm', 'competitor-analysis'];
+const IN_PROGRESS_SHOWN = ['finance-dashboard'];
+const PAUSED_SHOWN = ['chapterly', 'courtbook-nyc'];
 
 const campaigns = [
   {
@@ -47,6 +48,7 @@ function SectionHeader({ label, title, description }: { label: string; title: st
 export default function ProjectsPage() {
   const liveProjects     = projects.filter(p => p.status === 'live').sort((a, b) => a.order - b.order);
   const progressProjects = projects.filter(p => IN_PROGRESS_SHOWN.includes(p.slug)).sort((a, b) => a.order - b.order);
+  const pausedProjects   = projects.filter(p => PAUSED_SHOWN.includes(p.slug)).sort((a, b) => a.order - b.order);
 
   return (
     <div className="pt-24 pb-20">
@@ -81,6 +83,18 @@ export default function ProjectsPage() {
               </div>
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
                 {progressProjects.map(p => <ProjectCard key={p.slug} project={p} />)}
+              </div>
+            </>
+          )}
+
+          {pausedProjects.length > 0 && (
+            <>
+              <div className="flex items-center gap-3 mb-5 mt-10">
+                <p className="text-void-500 text-xs font-medium tracking-widest uppercase">Paused</p>
+                <div className="flex-1 h-px bg-surface-border" />
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                {pausedProjects.map(p => <ProjectCard key={p.slug} project={p} />)}
               </div>
             </>
           )}

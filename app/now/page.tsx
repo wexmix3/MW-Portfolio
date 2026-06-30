@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'What Max Wexley is working on, reading, training, and learning right now.',
 };
 
-const LAST_UPDATED = 'April 2026';
+const LAST_UPDATED = 'June 2026';
 
 export default function NowPage() {
   return (
@@ -34,13 +34,13 @@ export default function NowPage() {
             <div className="flex flex-col gap-3">
               <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
                 <div className="flex items-center justify-between mb-1">
-                  <div className="font-medium text-void-50">Chapterly</div>
+                  <div className="font-medium text-void-50">Wex Advisory</div>
                   <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Live</span>
                 </div>
                 <p className="text-sm text-void-400 leading-relaxed">
-                  An AI reading tracker I built because I wanted one. Live at{' '}
-                  <a href="https://www.getchapterly.com" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">getchapterly.com</a>
-                  {' '}— real users, real subscriptions. Still adding to it.
+                  My AI consulting practice — built a free AI audit, a competitive intelligence tool, a cold outreach pipeline, and a LinkedIn content engine. Live at{' '}
+                  <a href="https://wexadvisory.com" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">wexadvisory.com</a>
+                  {' '}— one serious prospect in advanced discussions, actively building the pipeline.
                 </p>
               </div>
               <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
@@ -50,9 +50,14 @@ export default function NowPage() {
                 </p>
               </div>
               <div className="p-5 rounded-xl border border-surface-border bg-surface-card">
-                <div className="font-medium text-void-50 mb-1">More coming</div>
+                <div className="flex items-center justify-between mb-1">
+                  <div className="font-medium text-void-50">Chapterly</div>
+                  <span className="text-xs px-2 py-0.5 rounded-full bg-void-500/10 text-void-400 border border-void-500/20">Paused</span>
+                </div>
                 <p className="text-sm text-void-400 leading-relaxed">
-                  A few other things in motion. Not ready to talk about yet.
+                  An AI reading tracker I built because I wanted one. Shipped with real users and subscriptions at{' '}
+                  <a href="https://www.getchapterly.com" target="_blank" rel="noopener noreferrer" className="text-gold hover:underline">getchapterly.com</a>
+                  {' '}— paused while I focus on Wex Advisory.
                 </p>
               </div>
             </div>
