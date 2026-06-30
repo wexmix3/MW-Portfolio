@@ -132,43 +132,29 @@ export default function AboutHero() {
               </p>
               <div className="flex flex-col gap-2">
                 {[
-                  { name: 'Chapterly', sub: 'AI reading tracker · Live', href: 'https://www.getchapterly.com', live: true },
-                  { name: 'Personal Finance Tracker', sub: 'Portfolio & budget dashboard · Live', href: 'https://finance-dashboard-max.vercel.app', live: true },
-                  { name: 'LinkedIn CRM', sub: 'Networking relationship manager · Live', href: 'https://networking-crm-eta.vercel.app', live: true },
-                  { name: 'Competitor Analysis Tool', sub: 'AI-powered competitive intelligence', href: null, live: false },
-                ].map(({ name, sub, href, live }) =>
-                  href ? (
-                    <a
-                      key={name}
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex items-center justify-between p-3 rounded-lg border border-surface-border hover:border-gold/30 hover:bg-gold/5 transition-all"
-                    >
-                      <div>
-                        <p className="text-sm font-semibold text-void-50 group-hover:text-gold transition-colors">{name}</p>
-                        <p className="text-xs text-void-500 mt-0.5">{sub}</p>
-                      </div>
-                      <div className="flex items-center gap-1.5">
-                        {live && <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse-slow" />}
-                        <ArrowRight size={14} className="text-void-500 group-hover:text-gold group-hover:translate-x-0.5 transition-all" />
-                      </div>
-                    </a>
-                  ) : (
-                    <div
-                      key={name}
-                      className="flex items-center justify-between p-3 rounded-lg border border-surface-border"
-                    >
-                      <div>
-                        <p className="text-sm font-semibold text-void-50">{name}</p>
-                        <p className="text-xs text-void-500 mt-0.5">{sub}</p>
-                      </div>
-                      <span className="text-[10px] px-2 py-0.5 rounded-full border border-void-700 text-void-500">
-                        local
-                      </span>
+                  { name: 'Wex Advisory', sub: 'AI consulting practice · Live', href: 'https://wexadvisory.com', live: true, paused: false },
+                  { name: 'Competitor Analysis Tool', sub: 'AI-powered competitive intelligence · Live', href: 'https://tool.wexadvisory.com', live: true, paused: false },
+                  { name: 'Personal Finance Tracker', sub: 'Portfolio & budget dashboard · Live', href: 'https://finance-dashboard-max.vercel.app', live: true, paused: false },
+                  { name: 'Chapterly', sub: 'AI reading tracker · Paused', href: 'https://www.getchapterly.com', live: false, paused: true },
+                ].map(({ name, sub, href, live, paused }) => (
+                  <a
+                    key={name}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-center justify-between p-3 rounded-lg border border-surface-border hover:border-gold/30 hover:bg-gold/5 transition-all"
+                  >
+                    <div>
+                      <p className="text-sm font-semibold text-void-50 group-hover:text-gold transition-colors">{name}</p>
+                      <p className="text-xs text-void-500 mt-0.5">{sub}</p>
                     </div>
-                  )
-                )}
+                    <div className="flex items-center gap-1.5">
+                      {live && <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse-slow" />}
+                      {paused && <span className="text-[10px] px-2 py-0.5 rounded-full border border-void-700 text-void-500">paused</span>}
+                      <ArrowRight size={14} className="text-void-500 group-hover:text-gold group-hover:translate-x-0.5 transition-all" />
+                    </div>
+                  </a>
+                ))}
               </div>
             </div>
 

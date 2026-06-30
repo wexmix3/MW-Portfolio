@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     template: '%s | Max Wexley',
   },
   description:
-    'Finance analyst at BBVA and self-taught builder. Michigan \'24. Creator of Chapterly — a live AI-powered reading app. Finance by day, building by nature.',
-  keywords: ['Max Wexley', 'finance analyst', 'BBVA', 'builder', 'Chapterly', 'University of Michigan', 'energy'],
+    'Finance analyst at BBVA and self-taught builder. Michigan \'24. Founder of Wex Advisory, an AI consulting practice. Finance by day, building by nature.',
+  keywords: ['Max Wexley', 'finance analyst', 'BBVA', 'builder', 'Wex Advisory', 'University of Michigan', 'energy'],
   authors: [{ name: 'Max Wexley' }],
   openGraph: {
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: 'Max Wexley',
     title: 'Max Wexley — Finance Analyst & Builder',
     description:
-      'Finance analyst at BBVA and self-taught builder. Michigan \'24. Creator of Chapterly.',
+      'Finance analyst at BBVA and self-taught builder. Michigan \'24. Founder of Wex Advisory.',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Max Wexley' }],
   },
   twitter: {

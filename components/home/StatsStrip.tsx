@@ -4,10 +4,9 @@ import { projects } from '@/data/projects';
 
 interface Props {
   github: GitHubStats | null;
-  chapterlyUsers: number | null;
 }
 
-export default function StatsStrip({ github, chapterlyUsers }: Props) {
+export default function StatsStrip({ github }: Props) {
   const stats = [
     {
       icon: <Package size={18} className="text-gold" />,
@@ -29,9 +28,9 @@ export default function StatsStrip({ github, chapterlyUsers }: Props) {
     },
     {
       icon: <Star size={18} className="text-gold" />,
-      value: chapterlyUsers ? `${chapterlyUsers.toLocaleString()}+` : '—',
-      label: 'Chapterly users',
-      live: !!chapterlyUsers,
+      value: `${projects.length}`,
+      label: 'Projects shipped',
+      live: false,
     },
   ];
 

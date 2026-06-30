@@ -58,29 +58,13 @@ async function fetchGitHubStats(): Promise<GitHubStats | null> {
   }
 }
 
-async function fetchChapterlyUsers(): Promise<number | null> {
-  try {
-    const res = await fetch('https://www.getchapterly.com/api/stats/public', {
-      next: { revalidate: 3600 },
-    });
-    if (!res.ok) return null;
-    const data = await res.json();
-    return typeof data.count === 'number' ? data.count : null;
-  } catch {
-    return null;
-  }
-}
-
 export default async function HomePage() {
-  const [github, chapterlyUsers] = await Promise.all([
-    fetchGitHubStats(),
-    fetchChapterlyUsers(),
-  ]);
+  const github = await fetchGitHubStats();
 
   return (
     <>
       <AboutHero />
-      <StatsStrip github={github} chapterlyUsers={chapterlyUsers} />
+      <StatsStrip github={github} />
 
       {/* Contact */}
       <section className="py-20 border-t border-surface-border">
