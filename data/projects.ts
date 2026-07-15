@@ -175,11 +175,11 @@ export const projects: Project[] = [
     order: 8,
   },
   {
-    slug: 'courtbook-nyc',
-    title: 'CourtBook NYC',
+    slug: 'hoopers-hub',
+    title: "Hooper's Hub",
     tagline: 'Find and book basketball courts across New York City — 48 courts, real-time availability.',
     description:
-      'CourtBook NYC is an interactive platform for discovering and booking basketball courts across all five NYC boroughs. It features a Mapbox-powered interactive map, Stripe payment integration for bookable indoor venues, a community runs board, and a seeded database of 48 courts sourced and categorized by neighborhood. Full MVP built (32 pages, zero build errors) and parked pending a launch decision.',
+      "Hooper's Hub is an interactive platform for discovering and booking basketball courts across all five NYC boroughs. It features a Mapbox-powered interactive map, Stripe payment integration for bookable indoor venues, a community runs board, and a seeded database of 48 courts sourced and categorized by neighborhood. Full MVP built (32 pages, zero build errors) and parked pending a launch decision.",
     status: 'paused',
     coverImage: '/projects/courtbook.png',
     coverColor: '#0f2027',
@@ -229,7 +229,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'networking-crm',
-    title: 'LinkedIn CRM',
+    title: 'Networking CRM',
     tagline: 'Personal relationship manager for professional networking — built on top of LinkedIn data.',
     description:
       'A lightweight CRM designed to make professional networking intentional rather than passive. Track contacts, log interactions, set follow-up reminders, and surface connections you haven\'t spoken to in a while — all in one place.',
@@ -247,6 +247,54 @@ export const projects: Project[] = [
     lessons: [],
     featured: false,
     order: 10,
+  },
+  {
+    slug: 'music-maker',
+    title: 'Music Maker',
+    tagline: 'Local, zero-cost beat-building tool — stem separation, auto-slicing, and a BPM grid sequencer.',
+    description:
+      'A local desktop tool for building a beat or song from any imported track. Import a song, split it into vocal/drum/bass/other stems with Demucs, auto-slice those stems into loop-sized pieces, drag them onto a BPM-synced step grid alongside a bundled starter loop pack, and export a ready-to-upload WAV/MP3. Runs entirely on-device — no cloud hosting, no per-use API cost.',
+    status: 'in-progress',
+    coverImage: '/projects/music-maker.png',
+    coverColor: '#1a0a28',
+    tech: ['Next.js', 'TypeScript', 'FastAPI', 'Demucs', 'PyTorch', 'librosa'],
+    category: ['web', 'ai'],
+    highlights: [
+      'Demucs-powered stem separation (vocals/drums/bass/other) running locally on CPU',
+      'Auto BPM detection and bar-length slicing, with manual nudge for off slices',
+      'Step-sequencer grid for arranging stems and a bundled starter loop pack',
+      'One-click WAV/MP3 export, fully offline — no cloud cost per use',
+    ],
+    metrics: { 'Status': 'In progress', 'Cost': '$0/use' },
+    lessons: [
+      "Don't run the dev file-watcher with --reload on a directory Demucs writes to mid-job — a reload mid-request kills the separation run",
+    ],
+    featured: false,
+    order: 11,
+  },
+  {
+    slug: 'ai-operating-system',
+    title: 'AI Operating System',
+    tagline: 'A single Claude-based home base that runs every project below — skills, memory, and autonomous routines.',
+    description:
+      "The meta-layer behind everything else on this page. A persistent Claude Code environment configured as a personal operating system: project context files, a skill library for recurring workflows (build, brief, audit, draft, verify), a cross-session memory system, and scheduled autonomous routines that run on cron. It's what turns a chat session into an operator that carries context across every active project without re-explaining anything.",
+    status: 'live',
+    coverImage: '/projects/ai-os.png',
+    coverColor: '#0a0a1e',
+    tech: ['Claude Code', 'Claude Agent SDK', 'TypeScript', 'PowerShell'],
+    category: ['ai'],
+    highlights: [
+      'Skill library covering recurring workflows: daily briefing, build, audit, draft, verify, research',
+      'Persistent memory system that carries user preferences, feedback, and project state across sessions',
+      'Scheduled autonomous routines (cron-based) for recurring checks — morning briefing, PR review, outreach status',
+      'Per-task worksheets + git tags so any run leaves a resumable trace, even if the session itself dies',
+    ],
+    metrics: { 'Status': 'Live', 'Skills': '17+' },
+    lessons: [
+      'A worksheet and git tag per non-trivial task matters more than a chat log — it survives even when the session doesn\'t',
+    ],
+    featured: false,
+    order: 12,
   },
 ];
 
