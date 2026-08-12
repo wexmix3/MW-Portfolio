@@ -10,24 +10,24 @@ const buildingSkills = ['Next.js', 'TypeScript', 'Supabase', 'Claude AI', 'Strip
 export default function AboutHero() {
   return (
     <section className="relative min-h-[100svh] flex flex-col overflow-hidden bg-grid-pattern bg-grid">
-      {/* NYC skyline banner */}
-      <div className="relative w-full h-52 sm:h-64 flex-shrink-0 overflow-hidden mt-14">
+      {/* Ambient skyline texture — recedes far behind the headshot so it reads as
+          atmosphere, not a second competing photo subject */}
+      <div className="absolute inset-0 opacity-[0.07] pointer-events-none">
         <Image
           src="https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=1920&q=80"
-          alt="New York City skyline"
+          alt=""
           fill
-          className="object-cover object-center"
+          className="object-cover object-center grayscale"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-void-950/30 via-void-950/20 to-void-950" />
-        <div className="absolute inset-0 bg-gradient-to-r from-void-950/60 via-transparent to-void-950/60" />
       </div>
+      <div className="absolute inset-0 bg-void-950/80 pointer-events-none" />
 
       {/* Radial glow */}
       <div className="absolute inset-0 bg-gradient-radial from-gold/5 via-transparent to-transparent pointer-events-none" />
 
       {/* Main content */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 py-12 lg:py-16 flex-1">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 pt-32 pb-12 lg:pt-40 lg:pb-16 flex-1">
         <div className="grid lg:grid-cols-[1fr_420px] gap-12 lg:gap-16 items-start">
 
           {/* ── Left column ── */}
