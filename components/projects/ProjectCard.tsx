@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ExternalLink } from 'lucide-react';
@@ -8,7 +9,8 @@ import TechBadge from './TechBadge';
 import StatusBadge from './StatusBadge';
 
 export default function ProjectCard({ project }: { project: Project }) {
-  const hasScreenshot = project.coverImage?.startsWith('/projects/');
+  const [imgFailed, setImgFailed] = useState(false);
+  const hasScreenshot = project.coverImage?.startsWith('/projects/') && !imgFailed;
 
   return (
     <Link
@@ -26,6 +28,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             fill
             className="object-cover object-top"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            onError={() => setImgFailed(true)}
           />
         ) : (
           <span className="font-display text-5xl text-white/15 group-hover:text-white/25 transition-colors select-none">
